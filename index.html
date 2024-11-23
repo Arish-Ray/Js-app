@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<head>
+    <title>area app</title>
+</head>
+<body>
+    <h1>
+        <marquee>Area app</marquee>
+    </h1>
+<p>we shall find the area of a shape</p>
+<button onclick="area()">try</button>
+<script>
+    function area(){
+        var choice=prompt("enter your choice \n 1.square \n 2.rectangle ");
+        if (choice=="1"){
+            var side = prompt("enter the length of the side of the square");
+            var result=Number(side)*Number(side);
+            alert('the result is '+ result);
+        }
+        else if (choice == "2") {
+            var side = prompt("enter the length of the side of the rectangle");
+            var sideb = prompt("enter the breadth of the side of the rectangle");
+            var result = Number(side) * Number(sideb);
+            alert('the result is '+ result);
+        }
+    }
+
+</script>
+
+</body>
