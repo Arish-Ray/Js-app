@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<head>
+    <title>palindrome</title>
+</head>
+<body>
+    <h1>palindrome</h1>
+    <p>A palindrome is a word, number, phrase, or other sequence of symbols that reads the same backwards as forwards, such as madam or racecar</p>
+    <script>
+        function palindrome(mystring){
+            var input=mystring.replace(/[^A-Z0-9]/ig,"").toLowerCase();
+            var ri=input.split('').reverse().join('');
+
+            if (input === ri){
+                document.write("<div>" + mystring + "is a palidrome <div>");
+            }
+            else{
+             document.write("<div>" + mystring + "is not a palidrome <div>");
+              
+            }
+        }      
+        var word = prompt("enter a word");
+         palindrome(word);
+    </script>
+</body>
