@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<head>
+    
+</head>
+<body>
+    <h1><marquee>add your TO DO LISTS here.</marquee> </h1>
+    <form id="myform"> 
+    <input id="myinput" type="text">
+        <button>add</button>
+    </form>
+    <h2>To Do List</h2>
+    <ul id="myitem"></ul>
+    <script>
+        var myform = document.getElementById("myform");
+         var myinput = document.getElementById("myinput");
+          var myitem = document.getElementById("myitem");
+
+          myform.addEventListener("submit",
+          function(event){
+            event.preventDefault()
+            createitem(myinput.value)
+          })
+
+          function createitem(inputitems){
+            var items = `<li>${inputitems}
+                <button onclick="delete1(this)">delete</button></li>`
+                myitem.insertAdjacentHTML("beforeend",items)
+                myinput.value=""
+                myinput.focus()
+          }
+          function delete1(EtD){
+            EtD.parentElement.remove()
+          }
+    </script>
+</body>
